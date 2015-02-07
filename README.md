@@ -11,7 +11,7 @@ Key Details | |
 --- | ---
 Course Designation | C31
 Dates | Apr. 27, 2015 &ndash; May 20, 2015
-Class Times | 7 p.m. to 9 p.m., Mondays &amp; Wednesdays
+Class Times | 7 p.m. to 9 p.m., Tuesdays &amp; Thursdays
 Class Location | Code Fellows HQ (511 Boren Ave N, Seattle, WA 98109)
 
 
