@@ -1,7 +1,7 @@
-# Foundations of Computer Science and Web Development Bootcamp
-_A [Code Fellows](http://codefellows.com) Bootcamp_
+# Foundations of iOS App Development
+_A [Code Fellows](http://codefellows.com) Evening Course_
 
-Welcome aboard! It's so good to have you in this Bootcamp.
+Welcome aboard! It's so good to have you in this class.
 
 The amount of material we have to cover is ambitious. You will get the most out of this class if you dive into the prework, take good notes, keep up with the assignments, independently research any topics you need extra time with, and generally stay inquisitive and curious.
 
