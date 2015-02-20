@@ -13,6 +13,7 @@
 		A2783C941A9451910052E305 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2783C931A9451910052E305 /* Images.xcassets */; };
 		A2783C971A9451910052E305 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2783C951A9451910052E305 /* LaunchScreen.xib */; };
 		A2783CA31A9451910052E305 /* ClassRosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2783CA21A9451910052E305 /* ClassRosterTests.swift */; };
+		A2D3C1F11A96DC96006B3707 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3C1F01A96DC96006B3707 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A2783C9C1A9451910052E305 /* ClassRosterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassRosterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2783CA11A9451910052E305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2783CA21A9451910052E305 /* ClassRosterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterTests.swift; sourceTree = "<group>"; };
+		A2D3C1F01A96DC96006B3707 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				A2783C8C1A9451910052E305 /* AppDelegate.swift */,
-				A2783C8E1A9451910052E305 /* ViewController.swift */,
-				A2783C901A9451910052E305 /* Main.storyboard */,
+				A2D3C1F41A96E67C006B3707 /* View */,
+				A2D3C1F31A96E671006B3707 /* Controller */,
+				A2D3C1F21A96E666006B3707 /* Model */,
 				A2783C931A9451910052E305 /* Images.xcassets */,
 				A2783C951A9451910052E305 /* LaunchScreen.xib */,
 				A2783C8A1A9451910052E305 /* Supporting Files */,
@@ -110,6 +113,30 @@
 				A2783CA11A9451910052E305 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2D3C1F21A96E666006B3707 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2D3C1F01A96DC96006B3707 /* Person.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A2D3C1F31A96E671006B3707 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2783C8E1A9451910052E305 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A2D3C1F41A96E67C006B3707 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2783C901A9451910052E305 /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D3C1F11A96DC96006B3707 /* Person.swift in Sources */,
 				A2783C8F1A9451910052E305 /* ViewController.swift in Sources */,
 				A2783C8D1A9451910052E305 /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +433,7 @@
 				A2783CA81A9451910052E305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2783CA91A9451910052E305 /* Build configuration list for PBXNativeTarget "ClassRosterTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +442,7 @@
 				A2783CAB1A9451910052E305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
