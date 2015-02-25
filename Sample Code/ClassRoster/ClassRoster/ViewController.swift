@@ -8,49 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDataSource {
 
-  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var tableView: UITableView!
   
-  @IBOutlet weak var anotherLabel: UILabel!
+  let names = ["Brad","Russ","Pete","Kam","Max","Sherm","John","Earl","Bobby", "KJ","KPL", "Simon", "Burley","Jeremy", "Doug","Beast","Turbin","Sweezy","Kearse","Luke"]
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    
-      let russell = Person(firstName: "Russell", lastName: "Wilson")
-        let brad = Person(firstName: "Brad", lastName: "Johnson")
-    
-    //array stuff
-    var people = [Person]()
-    people.append(brad)
-    people.append(russell)
-    
-    let coolPeople = [brad,russell]
-    
-    //more array stuff
-    
-    var names = ["Richard","Pete","Kam","Earl"]
-    
-    let dude = names[1]
-    println(dude)
-    let guy = names[3]
-    println(guy)
-    names.removeAtIndex(0)
-    println(names.count)
-    
-    
-    
+    self.tableView.dataSource = self
     //this is the long way to make an array
     //var morePeople = Array<Person>()
     
-    
-    
-    self.nameLabel.text = "Hello"
-    self.anotherLabel.text = "Go Hawks"
-    
 //    let brad = Person(firstName: "Brad", lastName:"Johnson")
-//    
-    self.view.backgroundColor = UIColor.redColor()
+//
 //    println("view did load")
     // Do any additional setup after loading the view, typically from a nib.
   }
@@ -64,24 +35,27 @@ class ViewController: UIViewController {
     super.viewDidAppear(animated)
     println("view did appear")
   }
+  
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-  @IBAction func switchToggled(sender: UISwitch) {
-    if sender.on {
-      self.view.backgroundColor = UIColor.purpleColor()
-      self.nameLabel.text = "On"
-    } else {
-      self.view.backgroundColor = UIColor.yellowColor()
-      self.nameLabel.text = "Off"
-    }
+    return self.names.count
   }
-  @IBAction func buttonPressed(sender: AnyObject) {
-    
-    //this works, changes the buttons colors
-    if let button = sender as? UIButton {
-      button.backgroundColor = UIColor.yellowColor()
-    }
-    
-    self.view.backgroundColor = UIColor.blueColor()
+  
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+//    if indexPath.row == 0 {
+//      cell.backgroundColor = UIColor.blueColor()
+//    } else {
+//      cell.backgroundColor = UIColor.whiteColor()
+//    }
+    //cell.backgroundColor = UIColor.blueColor()
+    let name = self.names[indexPath.row]
+        cell.textLabel?.text = name
+//    cell.textLabel?.text = "\(indexPath.row))"
+
+    return cell
   }
+
+  
 }
 
