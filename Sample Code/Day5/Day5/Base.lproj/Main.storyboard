@@ -73,17 +73,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seahawks.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ec-fS-eBF">
+                                <rect key="frame" x="200" y="148" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.26747486149999999" green="1" blue="0.32945114939999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="hQU-cz-DmV"/>
+                                    <constraint firstAttribute="width" constant="200" id="xDk-gN-HUQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxQ-OU-EbM">
+                                <rect key="frame" x="275.5" y="570" width="49" height="30"/>
+                                <state key="normal" title="Photos">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="photosButtonPressed:" destination="7gp-eI-U2W" eventType="touchUpInside" id="CGl-hE-l3j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="oxQ-OU-EbM" secondAttribute="centerX" id="6v3-5W-8l0"/>
                             <constraint firstAttribute="centerX" secondItem="Blx-zc-a3g" secondAttribute="centerX" id="HES-C3-VIs"/>
                             <constraint firstItem="Blx-zc-a3g" firstAttribute="top" secondItem="M8V-tN-6dn" secondAttribute="bottom" constant="8" id="Xhp-Yd-hn6"/>
                             <constraint firstItem="VT2-gR-iDF" firstAttribute="top" secondItem="Blx-zc-a3g" secondAttribute="bottom" constant="8" id="Z5v-Bw-YR7"/>
                             <constraint firstAttribute="centerX" secondItem="VT2-gR-iDF" secondAttribute="centerX" id="quo-su-exD"/>
+                            <constraint firstItem="8ec-fS-eBF" firstAttribute="top" secondItem="VT2-gR-iDF" secondAttribute="bottom" constant="8" id="rZk-qu-HXf"/>
+                            <constraint firstAttribute="centerX" secondItem="8ec-fS-eBF" secondAttribute="centerX" id="vea-Jo-298"/>
+                            <constraint firstItem="TkQ-Gl-ECW" firstAttribute="top" secondItem="oxQ-OU-EbM" secondAttribute="bottom" id="yxr-2u-hsm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="firstNameLabel" destination="Blx-zc-a3g" id="qbl-4H-cft"/>
+                        <outlet property="imageVIew" destination="8ec-fS-eBF" id="WKX-rm-N7A"/>
+                        <outlet property="lastNameLabel" destination="VT2-gR-iDF" id="wdc-su-fiR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xrg-kF-vz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,4 +133,7 @@
             <point key="canvasLocation" x="717" y="-369"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="seahawks.png" width="500" height="500"/>
+    </resources>
 </document>

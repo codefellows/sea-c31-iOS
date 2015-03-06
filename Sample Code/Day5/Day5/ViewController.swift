@@ -25,6 +25,11 @@ class ViewController: UIViewController, UITableViewDataSource {
     self.tableView.dataSource = self
   }
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    self.tableView.reloadData()
+  }
+  
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.group.count
   }

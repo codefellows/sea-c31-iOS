@@ -6,11 +6,12 @@
 //  Copyright (c) 2015 BPJ. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Person {
-  var firstName = "John"
+  var firstName : String
   var lastName = "Doe"
+  var image : UIImage?
   
   init(fName : String, lName: String) {
     self.firstName = fName
