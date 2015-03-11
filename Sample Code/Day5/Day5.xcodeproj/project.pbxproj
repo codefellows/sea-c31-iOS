@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A28248C61AA962F300C35106 /* seahawks.png in Resources */ = {isa = PBXBuildFile; fileRef = A28248C51AA962F300C35106 /* seahawks.png */; };
+		A2D2B1AA1AAFE44A007ECA2A /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D2B1A91AAFE44A007ECA2A /* PersonCell.swift */; };
+		A2D2B1AC1AAFF0D9007ECA2A /* People.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2D2B1AB1AAFF0D9007ECA2A /* People.plist */; };
 		A2D3F2661AA6B0730029539C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3F2651AA6B0730029539C /* AppDelegate.swift */; };
 		A2D3F2681AA6B0730029539C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3F2671AA6B0730029539C /* ViewController.swift */; };
 		A2D3F26B1AA6B0730029539C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D3F2691AA6B0730029539C /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		A28248C51AA962F300C35106 /* seahawks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seahawks.png; sourceTree = "<group>"; };
+		A2D2B1A91AAFE44A007ECA2A /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		A2D2B1AB1AAFF0D9007ECA2A /* People.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = People.plist; sourceTree = "<group>"; };
 		A2D3F2601AA6B0730029539C /* Day5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D3F2641AA6B0730029539C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2D3F2651AA6B0730029539C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +89,9 @@
 			children = (
 				A2D3F2651AA6B0730029539C /* AppDelegate.swift */,
 				A2D3F2671AA6B0730029539C /* ViewController.swift */,
+				A2D2B1A91AAFE44A007ECA2A /* PersonCell.swift */,
 				A2D3F2691AA6B0730029539C /* Main.storyboard */,
+				A2D2B1AB1AAFF0D9007ECA2A /* People.plist */,
 				A28248C51AA962F300C35106 /* seahawks.png */,
 				A2D3F2871AA6B91B0029539C /* PersonDetailViewController.swift */,
 				A2D3F2851AA6B5A80029539C /* Person.swift */,
@@ -201,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D2B1AC1AAFF0D9007ECA2A /* People.plist in Resources */,
 				A2D3F26B1AA6B0730029539C /* Main.storyboard in Resources */,
 				A2D3F2701AA6B0730029539C /* LaunchScreen.xib in Resources */,
 				A28248C61AA962F300C35106 /* seahawks.png in Resources */,
@@ -223,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D3F2881AA6B91B0029539C /* PersonDetailViewController.swift in Sources */,
+				A2D2B1AA1AAFE44A007ECA2A /* PersonCell.swift in Sources */,
 				A2D3F2861AA6B5A80029539C /* Person.swift in Sources */,
 				A2D3F2681AA6B0730029539C /* ViewController.swift in Sources */,
 				A2D3F2661AA6B0730029539C /* AppDelegate.swift in Sources */,

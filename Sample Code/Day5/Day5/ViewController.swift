@@ -16,11 +16,23 @@ class ViewController: UIViewController, UITableViewDataSource {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    var me = Person(fName: "Brad", lName: "Johnson")
-    var russell = Person(fName: "Russell", lName: "Wilson")
+    if let filePath = NSBundle.mainBundle().pathForResource("People", ofType: "plist") {
+      
+      println(filePath)
+      //var myPath = "oisjfoisdiof"
+      if let plistArray = NSArray(contentsOfFile: filePath) {
+        println(plistArray.count)
+      }
+
+    }
     
-    self.group.append(me)
-    self.group.append(russell)
+    
+//    var me = Person(fName: "Brad", lName: "Johnson")
+//    Person.loadPersons()
+//    var russell = Person(fName: "Russell", lName: "Wilson")
+//    
+//    self.group.append(me)
+//    self.group.append(russell)
   
     self.tableView.dataSource = self
   }
@@ -35,9 +47,16 @@ class ViewController: UIViewController, UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PersonCell
     let personToDisplay = self.group[indexPath.row]
-    cell.textLabel?.text = personToDisplay.firstName
+//    cell.textLabel?.text = personToDisplay.firstName
+    cell.personLabel.text = personToDisplay.firstName
+    
+    if personToDisplay.image != nil {
+      cell.personImageView.image = personToDisplay.image
+    } else {
+      cell.personImageView.image = UIImage(named: "seahawks.png")
+    }
     
     return cell
   }

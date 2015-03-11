@@ -17,12 +17,19 @@ class PersonDetailViewController: UIViewController, UITextFieldDelegate,UIImageP
   
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      if self.selectedPerson.image != nil {
+        self.imageVIew.image = self.selectedPerson.image
+      }
+//      } else {
+////        self.imageVIew.image = UIImage(named: "placeholder.jpg")
+//      }
+      
       self.title = self.selectedPerson.firstName
       self.firstNameLabel.delegate = self
       
       self.firstNameLabel.text = self.selectedPerson.firstName
       self.lastNameLabel.text = self.selectedPerson.lastName
-      
     }
   
   override func viewWillDisappear(animated: Bool) {
@@ -52,6 +59,7 @@ class PersonDetailViewController: UIViewController, UITextFieldDelegate,UIImageP
     } else {
     imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
     }
+    //present view controller is inherited from UIViewController
     self.presentViewController(imagePickerController, animated: true, completion: nil)
   }
   

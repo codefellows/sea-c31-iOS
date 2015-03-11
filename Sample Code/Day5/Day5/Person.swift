@@ -16,6 +16,11 @@ class Person {
   init(fName : String, lName: String) {
     self.firstName = fName
     self.lastName = lName
+    //self.image = UIImage(named: "placeholder.jpg")
+  }
+  
+  class func loadPersons() {
+    //this would create a bunch of person objects
   }
   
 }

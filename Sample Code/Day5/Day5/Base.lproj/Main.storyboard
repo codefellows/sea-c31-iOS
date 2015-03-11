@@ -17,17 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7kj-79-6Q1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7kj-79-6Q1">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="1KC-RD-xJp">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="1KC-RD-xJp" customClass="PersonCell" customModule="Day5" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1KC-RD-xJp" id="dRh-uv-DUm">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6YE-0D-5dc">
+                                                    <rect key="frame" x="8" y="20" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="kQq-ly-EnO"/>
+                                                        <constraint firstAttribute="height" constant="60" id="zml-d4-g06"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItX-bh-h3U">
+                                                    <rect key="frame" x="76" y="20" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6YE-0D-5dc" firstAttribute="top" secondItem="ItX-bh-h3U" secondAttribute="top" id="F8v-M3-E8h"/>
+                                                <constraint firstItem="6YE-0D-5dc" firstAttribute="leading" secondItem="dRh-uv-DUm" secondAttribute="leadingMargin" id="Lsm-IJ-jBD"/>
+                                                <constraint firstItem="ItX-bh-h3U" firstAttribute="leading" secondItem="6YE-0D-5dc" secondAttribute="trailing" constant="8" id="x1N-05-0a7"/>
+                                                <constraint firstAttribute="centerY" secondItem="6YE-0D-5dc" secondAttribute="centerY" id="zjP-zQ-Bx3"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="personImageView" destination="6YE-0D-5dc" id="peb-QA-VFg"/>
+                                            <outlet property="personLabel" destination="ItX-bh-h3U" id="gid-hT-iCW"/>
                                             <segue destination="7gp-eI-U2W" kind="show" identifier="ShowPersonDetail" id="3pK-1G-N6i"/>
                                         </connections>
                                     </tableViewCell>
@@ -49,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1381" y="-369"/>
+            <point key="canvasLocation" x="1667" y="-369"/>
         </scene>
         <!--Person Detail View Controller-->
         <scene sceneID="LqA-iK-h72">
